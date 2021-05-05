@@ -1,0 +1,31 @@
+REST API for Roman Numbers generator application
+This is an application providing a REST API to convert arabic numbers to roman numbers.
+
+RomanNumbersApplicationTests runs JUnit tests to check the conversion algorithm.
+
+Build the application:
+from command line in the main directory of the downloaded application run this command:
+mvn clean install
+that will create the jar:
+....\roman-numbers\target\roman-numbers-0.0.1-SNAPSHOT.jar
+that contains all the runnable appication
+
+Start the application:
+from the command line go to the target directory and run the command:
+java -jar roman-numbers-0.0.1-SNAPSHOT.jar
+
+The application can be called with this command from the console:
+curl http://localhost:8080/convert?arabic=1999
+
+or from the browser with this url:
+http://localhost:8080/convert?arabic=1999
+
+REST API
+The REST API to the example app is described below.
+
+Get roman converted number given an arabic number
+Request
+GET /convert?arabic=1999
+
+Response
+MCMXCIX
